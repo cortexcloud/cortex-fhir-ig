@@ -55,9 +55,28 @@ Description: "Base profile สำหรับ H LAB Patient"
 * gender 1.. MS
 * birthDate MS
 * address MS
-  * city MS
-  * district MS
-  * state MS
+* address ^slicing.discriminator.type = #value
+* address ^slicing.discriminator.path = "extension(https://fhir.cortex.app/core/StructureDefinition/ex-hlab-address-official-address).value"
+* address ^slicing.rules = #open
+* address contains
+  official 1.. and
+  home 1..
+* address[official] ^short = "ที่อยู่ตามบัตรประชาชน"
+  * extension contains
+    EX_HLAB_Address_OfficialAddress named official 1.. MS
+  * extension[official].value[x] = true
+  * use 1..
+  * use = #home
+  * city 1.. MS
+  * district 1.. MS
+  * state 1.. MS
+  * postalCode MS
+* address[home] ^short = "ที่อยู่ติดต่อได้"
+  * use 1..
+  * use = #home
+  * city 1.. MS
+  * district 1.. MS
+  * state 1.. MS
   * postalCode MS
 * photo MS
 * contact MS
