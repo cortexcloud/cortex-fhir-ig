@@ -54,6 +54,9 @@ Description: "Base profile สำหรับ H LAB Patient"
   * extension[additionalSystem].value[x] = #line
 * gender 1.. MS
 * birthDate MS
+  * extension contains
+    $EX_HL7_DataAbsentReason named dataAbsentReason 0..1
+  * extension[dataAbsentReason] ^short = "กรณีไม่ทราบวันเดือนที่เกิด เช่น ทราบเฉพาะปี"
 * address MS
 * address ^slicing.discriminator.type = #value
 * address ^slicing.discriminator.path = "extension(https://fhir.cortex.app/core/StructureDefinition/ex-hlab-address-official-address).value"
