@@ -52,7 +52,7 @@ Description: "Base profile สำหรับ H LAB Patient"
   * extension contains
     EX_HLAB_ContactPoint_AdditionalSystem named additionalSystem 0..1 MS
   * extension[additionalSystem].value[x] = #line
-* gender MS
+* gender 1.. MS
 * birthDate MS
 * address MS
   * city MS
@@ -61,7 +61,40 @@ Description: "Base profile สำหรับ H LAB Patient"
   * postalCode MS
 * photo MS
 * contact MS
+* contact ^slicing.discriminator.type = #value
+* contact ^slicing.discriminator.path = "relationship"
+* contact ^slicing.rules = #open
+* contact contains
+  emergency 1..
+* contact[emergency] ^short = "การติดต่อกรณีฉุกเฉิน"
+  * relationship ^slicing.discriminator.type = #value
+  * relationship ^slicing.discriminator.path = "coding"
+  * relationship ^slicing.rules = #open
+  * relationship contains
+    emergency 1.. MS and
+    relationship 1.. MS
+  * relationship[emergency] ^short = "ใช้ระบุว่าเป็น emergency contact"
+  * relationship[emergency] = $CS_HL7_ContactRole#C "Emergency Contact"
+  * relationship[relationship] ^short = "ใช้ระบุความสัมพันธ์"
+  * relationship[relationship] from $VS_SCT_Person (extensible)
+  * name 1.. MS
+  * telecom
+  * telecom ^slicing.discriminator[0].type = #value
+  * telecom ^slicing.discriminator[=].path = "system"
+  * telecom ^slicing.rules = #open
+  * telecom contains
+      phone 1.. MS
+  * telecom[phone] ^short = "เบอร์โทรศัพท์"
+    * system 1.. MS
+    * system = #phone
+    * value 1.. MS
 * communication MS
+* communication ^slicing.discriminator.type = #value
+* communication ^slicing.discriminator.path = "preferred"
+* communication ^slicing.rules = #open
+* communication contains
+  preferred 1.. MS
+* communication[preferred]
   * language MS
   * preferred MS
   * preferred = true
