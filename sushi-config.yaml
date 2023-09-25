@@ -20,10 +20,9 @@ jurisdiction: "urn:iso:std:iso:3166#TH"
 description: An IG for communicating with the FHIR API of H LAB's products.
 license: CC0-1.0
 fhirVersion: 5.0.0
-# dependencies:
-# sil-th.terms.core: dev
-# silth.fhir.th.extensions: dev
-# hl7.fhir.uv.ips: 1.0.0
+dependencies:
+  silth.fhir.terminology.core: 0.1.2
+  silth.fhir.th.extensions: 1.0.0
 parameters:
   apply-publisher: true
   apply-contact: true
