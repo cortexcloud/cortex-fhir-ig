@@ -1,0 +1,55 @@
+# ╭─────────────────────────────────ImplementationGuide-fish.json──────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  https://fshschool.org/docs/sushi/configuration/#full-configuration                            │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hlab.cortex.core
+canonical: https://fhir.cortex.app/core
+version: 0.1.0
+name: HlabCortexCore
+title: H LAB Cortex Core - FHIR Implementation Guide
+status: draft
+publisher:
+  name: H LAB Consulting
+# contact:
+#   - name: Bill Cod
+#     telecom:
+#       - system: email
+#         value: cod@reef.gov
+jurisdiction: "urn:iso:std:iso:3166#TH"
+description: An IG for communicating with the FHIR API of H LAB's products.
+license: CC0-1.0
+fhirVersion: 5.0.0
+# dependencies:
+# sil-th.terms.core: dev
+# silth.fhir.th.extensions: dev
+# hl7.fhir.uv.ips: 1.0.0
+parameters:
+  apply-publisher: true
+  apply-contact: true
+  show-inherited-invariants: false
+  excludettl: true
+  excludemap: true
+copyrightYear: 2023+
+releaseLabel: trial-use
+
+pages:
+  index.md:
+    title: Cortex Core FHIR IG
+  profiles.md:
+    title: รายการ Profiles
+  # extensions.md:
+  #   title: รายการ Extensions
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  หน้าแรก: index.html
+  สารบัญ: toc.html
+  เนื้อหาทั้งหมด: artifacts.html
+  Profiles: profiles.html
+  # Extensions: extensions.html
+  # 43 แฟ้ม plus: files-listing.html
+  # Other Resources:
+  #   "FHIR Spec ": new-tab {{site.data.fhir.path}}index.html
