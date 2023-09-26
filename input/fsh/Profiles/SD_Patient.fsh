@@ -5,19 +5,18 @@ Title: "H LAB Patient: Base"
 Description: "Base profile สำหรับ H LAB Patient"
 * ^status = #draft
 * ^publisher = "H LAB Counsulting"
-// Patient.extension: religion
-// Patient.extension: citizenship
-// Patient.extension: race
 // Patient.extension: education
 * extension contains
     $EX_HL7_Religion named religion 0.. MS and
     $EX_HL7_Nationality named nationality 0.. MS and
-    EX_HLAB_PatientRace named race 0.. MS
+    EX_HLAB_PatientRace named race 0.. MS and
+    EX_HLAB_PatientEducation named education 0.. MS
 * extension[religion] ^short = "ศาสนา"
 * extension[religion].valueCodeableConcept from VS_SCT_Religion (extensible)
 * extension[nationality] ^short = "สัญชาติ"
 * extension[nationality].extension.valueCodeableConcept from $VS_ISO3166 (extensible)
 * extension[race] ^short = "เชื้อชาติ"
+* extension[education] ^short = "การศึกษา"
 * identifier MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
