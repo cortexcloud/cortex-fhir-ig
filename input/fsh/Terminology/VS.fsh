@@ -1,7 +1,12 @@
 Alias: $SD_SharableVS = http://hl7.org/fhir/StructureDefinition/shareablevalueset
 
+// From external terminology
+Alias: $VS_ISO3166 = http://hl7.org/fhir/ValueSet/country
+
+
 Alias: $VS_HLAB_ContactPoint_AdditionalSystem = https://fhir.cortex.app/core/ValueSet/cs-hlab-contact-point-additional-system
 Alias: $VS_SCT_Person = https://fhir.cortex.app/core/ValueSet/vs-sct-person
+Alias: $VS_SCT_Religion = https://fhir.cortex.app/core/ValueSet/vs-sct-religion
 
 ValueSet: VS_HLAB_ContactPoint_AdditionalSystem
 Id: vs-hlab-contact-point-additional-system
@@ -19,3 +24,12 @@ Description: "SNOMED CT Person codes"
 * ^experimental = false
 * ^copyright = "This resource includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct or info@snomed.org"
 * include codes from system SNOMED_CT_INT where concept is-a #125676002
+
+ValueSet: VS_SCT_Religion
+Id: vs-sct-religion
+Title: "SNOMED CT Religion codes"
+Description: "SNOMED CT Religion codes"
+* ^meta.profile = $SD_SharableVS
+* ^experimental = false
+* ^copyright = "This resource includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct or info@snomed.org"
+* include codes from system SNOMED_CT_INT where concept is-a #108334009

@@ -7,5 +7,4 @@ Description: "Indicate that this address is meant to be the 'official' address f
 * ^date = "2023-09-25"
 * ^context[0].type = #element
 * ^context[=].expression = "Address"
-* value[x] 1..
 * value[x] only boolean

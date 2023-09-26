@@ -10,6 +10,5 @@ Description: "To specify additional contact point system"
 * ^context[+].type = #element
 * ^context[=].expression = "ExtendedContactDetail"
 * . 0..1
-* value[x] 1..
 * value[x] only code
-* value[x] from $VS_HLAB_ContactPoint_AdditionalSystem (extensible)
+* value[x] from VS_HLAB_ContactPoint_AdditionalSystem (extensible)
