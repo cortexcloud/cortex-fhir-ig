@@ -1,0 +1,17 @@
+{
+  "name": "cortex-fhir-ig",
+  "version": "1.0.0",
+  "description": "To get started, run:",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "volta": {
+    "node": "18.17.1",
+    "yarn": "4.0.0-rc.51"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
