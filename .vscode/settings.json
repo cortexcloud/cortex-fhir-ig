@@ -1,0 +1,18 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.tabSize": 2,
+  "eslint.validate": ["json"],
+  "git.pruneOnFetch": true,
+  "git.pullTags": false,
+  "githubPullRequests.ignoredPullRequestBranches": ["main"],
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  }
+}
