@@ -42,6 +42,8 @@ To get started, run:
 ./_updatePublisher.sh
 ```
 
+## Build & Serve
+
 Then use this command to to generate the IG.
 
 ```bash
