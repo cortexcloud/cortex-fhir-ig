@@ -1,10 +1,9 @@
-Profile: HlabPatientOPD
+Profile: HlabPatient
 Parent: Patient
-Id: hlab-patient-base
-Title: "H LAB Patient: Base"
-Description: "Base profile สำหรับ H LAB Patient"
+Id: hlab-patient
+Title: "H LAB Patient"
+Description: "ผู้ป่วย/ผู้รับบริการสุขภาพ"
 * ^status = #draft
-* ^publisher = "H LAB Counsulting"
 // Patient.extension: education
 * extension contains
     $EX_HL7_Religion named religion 0.. MS and
@@ -103,7 +102,7 @@ Description: "Base profile สำหรับ H LAB Patient"
   * relationship[emergency] ^short = "ใช้ระบุว่าเป็น emergency contact"
   * relationship[emergency] = $CS_HL7_ContactRole#C "Emergency Contact"
   * relationship[relationship] ^short = "ใช้ระบุความสัมพันธ์"
-  * relationship[relationship] from $VS_SCT_Person (extensible)
+  * relationship[relationship] from VS_SCT_Person (extensible)
   * name 1.. MS
   * telecom
   * telecom ^slicing.discriminator[0].type = #value

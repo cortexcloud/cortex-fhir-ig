@@ -1,3 +1,5 @@
+// From external terminology
+Alias: $VS_ISO3166 = http://hl7.org/fhir/ValueSet/country
 
 // From terminology.hl7.org
 Alias: $VS_HL7_ContactRelationship = http://hl7.org/fhir/ValueSet/patient-contactrelationship

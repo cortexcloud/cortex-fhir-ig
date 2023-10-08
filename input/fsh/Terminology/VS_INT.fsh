@@ -1,21 +1,3 @@
-Alias: $SD_SharableVS = http://hl7.org/fhir/StructureDefinition/shareablevalueset
-
-// From external terminology
-Alias: $VS_ISO3166 = http://hl7.org/fhir/ValueSet/country
-
-
-Alias: $VS_HLAB_ContactPoint_AdditionalSystem = https://fhir.cortex.app/core/ValueSet/cs-hlab-contact-point-additional-system
-Alias: $VS_SCT_Person = https://fhir.cortex.app/core/ValueSet/vs-sct-person
-Alias: $VS_SCT_Religion = https://fhir.cortex.app/core/ValueSet/vs-sct-religion
-
-ValueSet: VS_HLAB_ContactPoint_AdditionalSystem
-Id: vs-hlab-contact-point-additional-system
-Title: "Additional ContactPoint system value set"
-Description: "Additional ContactPoint system value set"
-* ^meta.profile = $SD_SharableVS
-* ^experimental = false
-* include codes from system CS_HLAB_ContactPoint_AdditionalSystem
-
 ValueSet: VS_SCT_Person
 Id: vs-sct-person
 Title: "SNOMED CT Person codes"
