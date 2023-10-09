@@ -4,7 +4,7 @@
 # │  https://fshschool.org/docs/sushi/configuration/#full-configuration                            │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hlab.cortex.core
-canonical: https://fhir.cortex.app/core
+canonical: https://fhir.cortexcloud.co/core
 version: 0.1.0
 name: HlabCortexCore
 title: H LAB Cortex Core - FHIR Implementation Guide

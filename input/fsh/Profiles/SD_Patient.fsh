@@ -34,9 +34,9 @@ Description: "ผู้ป่วย/ผู้รับบริการสุ�
   * given 1.. MS
   * prefix 1.. MS
 * telecom MS
-* telecom ^slicing.discriminator[0].type = #value
-* telecom ^slicing.discriminator[=].path = "system"
-* telecom ^slicing.rules = #open
+  * ^slicing.discriminator[0].type = #value
+  * ^slicing.discriminator[=].path = "system"
+  * ^slicing.rules = #open
 * telecom contains
     phone 1.. MS and
     email 0..* MS and
@@ -62,9 +62,9 @@ Description: "ผู้ป่วย/ผู้รับบริการสุ�
     $EX_HL7_DataAbsentReason named dataAbsentReason 0..1
   * extension[dataAbsentReason] ^short = "กรณีไม่ทราบวันเดือนที่เกิด เช่น ทราบเฉพาะปี"
 * address MS
-* address ^slicing.discriminator.type = #value
-* address ^slicing.discriminator.path = "extension(https://fhir.cortex.app/core/StructureDefinition/ex-hlab-address-official-address).value"
-* address ^slicing.rules = #open
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "extension(https://fhir.cortexcloud.co/core/StructureDefinition/ex-hlab-address-official-address).value"
+  * ^slicing.rules = #open
 * address contains
   official 1.. and
   home 1..
@@ -87,15 +87,16 @@ Description: "ผู้ป่วย/ผู้รับบริการสุ�
   * postalCode MS
 * photo MS
 * contact MS
-* contact ^slicing.discriminator.type = #value
-* contact ^slicing.discriminator.path = "relationship"
-* contact ^slicing.rules = #open
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "relationship"
+  * ^slicing.rules = #open
 * contact contains
   emergency 1..
 * contact[emergency] ^short = "การติดต่อกรณีฉุกเฉิน"
-  * relationship ^slicing.discriminator.type = #value
-  * relationship ^slicing.discriminator.path = "coding"
-  * relationship ^slicing.rules = #open
+  * relationship
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "coding"
+    * ^slicing.rules = #open
   * relationship contains
     emergency 1.. MS and
     relationship 1.. MS
@@ -105,9 +106,9 @@ Description: "ผู้ป่วย/ผู้รับบริการสุ�
   * relationship[relationship] from VS_SCT_Person (extensible)
   * name 1.. MS
   * telecom
-  * telecom ^slicing.discriminator[0].type = #value
-  * telecom ^slicing.discriminator[=].path = "system"
-  * telecom ^slicing.rules = #open
+    * ^slicing.discriminator[0].type = #value
+    * ^slicing.discriminator[=].path = "system"
+    * ^slicing.rules = #open
   * telecom contains
       phone 1.. MS
   * telecom[phone] ^short = "เบอร์โทรศัพท์"
@@ -115,9 +116,9 @@ Description: "ผู้ป่วย/ผู้รับบริการสุ�
     * system = #phone
     * value 1.. MS
 * communication MS
-* communication ^slicing.discriminator.type = #value
-* communication ^slicing.discriminator.path = "preferred"
-* communication ^slicing.rules = #open
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "preferred"
+  * ^slicing.rules = #open
 * communication contains
   preferred 1.. MS
 * communication[preferred]
