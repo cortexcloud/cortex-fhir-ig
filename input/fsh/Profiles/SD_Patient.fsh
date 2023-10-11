@@ -21,7 +21,8 @@ Description: "ผู้ป่วย/ผู้รับบริการสุ�
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier contains
-  cid 1..1
+  cid 1..1 and
+  hn 1..
 * identifier[cid] ^short = "เลขประจำตัวประชาชน"
   * type 1.. MS
   * type from $VS_TH_IdentifierType (extensible)
@@ -29,6 +30,16 @@ Description: "ผู้ป่วย/ผู้รับบริการสุ�
   * system 1.. MS
   * system = $ID_ThaiCid
   * value 1.. MS
+* identifier[hn] ^short = "เลขประจำตัวผู้ป่วย (HN)"
+  * type from $VS_TH_IdentifierType (extensible)
+  * type = $CS_TH_IdentifierType#localHn
+  * system 1.. MS
+  * system obeys HN-uri
+  * system ^example.label = "HN system URL"
+  * system ^example.valueUri = $ID_LO_HN
+  * value 1..
+  * value ^example.label = "เลขประจำตัวผู้ป่วย (HN)"
+  * value ^example.valueString = "123456"
 * name 1.. MS
   * family 1.. MS
   * given 1.. MS
@@ -67,10 +78,10 @@ Description: "ผู้ป่วย/ผู้รับบริการสุ�
   * ^slicing.rules = #open
 * address contains
   official 1.. and
-  home 1..
+  home 0..
 * address[official] ^short = "ที่อยู่ตามบัตรประชาชน"
   * extension contains
-    EX_HLAB_Address_OfficialAddress named official 1.. MS
+    EX_HLAB_Address_OfficialAddress named official 1..1 MS
   * extension[official].value[x] = true
   * use 1..
   * use = #home
