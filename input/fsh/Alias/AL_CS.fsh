@@ -9,6 +9,7 @@ Alias: $LNC = http://loinc.org
 Alias: $UCUM = http://unitsofmeasure.org
 Alias: $ISCO08 = urn:oid:2.16.840.1.113883.2.9.6.2.7
 Alias: $ISO4217 = urn:iso:std:iso:4217
+Alias: $Languages = urn:ietf:bcp:47
 Alias: $ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $EDQM = http://standardterms.edqm.eu
 
