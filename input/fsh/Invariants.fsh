@@ -20,10 +20,10 @@
 // Severity: #warning
 // Expression: "value.matches('^([0-9]{13})$')"
 
-// Invariant: HN-uri
-// Description: "เลขประจำตัวผู้ป่วย (HN) ควรมี system URL ในรูปแบบ https://terms.sil-th.org/hcode/5/{XXXXX}/HN หรือ https://terms.sil-th.org/hcode/9/{XXXXX}/HN โดยที่ {XXXXX} คือรหัส HCODE 5 หลัก หรือ 9 หลัก ซึ่งออกโดยกยผ."
-// Severity: #warning
-// Expression: "value.matches('^(https://terms.sil-th.org/hcode/5/[0-9]{5}/HN)$') or value.matches('^(https://terms.sil-th.org/hcode/9/[0-9]{9}/HN)$')"
+Invariant: HN-uri
+Description: "เลขประจำตัวผู้ป่วย (HN) ควรมี system URL ในรูปแบบ https://terms.sil-th.org/hcode/5/{XXXXX}/HN หรือ https://terms.sil-th.org/hcode/9/{XXXXX}/HN โดยที่ {XXXXX} คือรหัส HCODE 5 หลัก หรือ 9 หลัก ซึ่งออกโดยกยผ."
+Severity: #warning
+Expression: "value.matches('^(https://terms.sil-th.org/hcode/5/[0-9]{5}/HN)$') or value.matches('^(https://terms.sil-th.org/hcode/9/[0-9]{9}/HN)$')"
 
 // Invariant: Passport-uri
 // Description: "หมายเลขหนังสือเดินทาง (Passport) ควรมี system URL ในรูปแบบ http://hl7.org/fhir/sid/passport-{XXX} โดยที่ {XXX} คือรหัสประเทศ 3 หลักซึ่งออกโดย ISO 3166"

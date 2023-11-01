@@ -1,4 +1,6 @@
-Alias: $SD_EX_Encounter_Extension = https://fhir.cortex.app/core/extensions/StructureDefinition/hlab-encounter-extension
+// Terminology
+Alias: $SD_SharableCS = http://hl7.org/fhir/StructureDefinition/shareablecodesystem
+Alias: $SD_SharableVS = http://hl7.org/fhir/StructureDefinition/shareablevalueset
 
 // From FHIR core
 Alias: $EX_HL7_DataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-reason

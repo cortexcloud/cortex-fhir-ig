@@ -1,6 +1,6 @@
 
 Extension: EX_HLAB_PatientRace
-Id: ex-halb-patient-race
+Id: ex-hlab-patient-race
 Title: "Patient: Race"
 Description: "เชื้อชาติของบุคคล"
 * ^status = #active
@@ -12,7 +12,7 @@ Description: "เชื้อชาติของบุคคล"
 
 
 Extension: EX_HLAB_PatientEducation
-Id: ex-halb-patient-education
+Id: ex-hlab-patient-education
 Title: "Patient: Education"
 Description: "ระดับการศึกษาของบุคคล"
 * ^status = #active
