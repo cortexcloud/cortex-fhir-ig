@@ -20,4 +20,4 @@ Alias: $CS_INT_ISCED1997 = https://terms.sil-th.org/core/CodeSystem/cs-int-isced
 
 // From terminology.hl7.org
 Alias: $CS_HL7_ContactRole = http://terminology.hl7.org/CodeSystem/v2-0131
-Alias: $CS_HL7_CoverageClass = http://terminology.hl7.org/CodeSystem/coverage-class	
+Alias: $CS_HL7_CoverageClass = http://terminology.hl7.org/CodeSystem/coverage-class
